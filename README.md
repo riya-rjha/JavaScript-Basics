@@ -1,6 +1,7 @@
 # JavaScript-Basics
 
 This repository consists of all basic to advanced usages of JavaScript functions for any beginner in the field of Front End Development. It involves the following topics : 
+
 📌 Functions
 
 📌 Arrays
