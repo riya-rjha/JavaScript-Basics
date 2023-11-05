@@ -1,0 +1,35 @@
+h1 {
+    font-size: 28px;
+    color: rgb(18, 0, 35);
+    font-family: cursive;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: rgb(43, 0, 86);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.container {
+    border: 4px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#box1, #box2, #box3, #box4, #box5, #box6, #box7, #box8, #box9 {
+    border: 2px solid green;
+    display: inline-block;
+    width: 95px;
+    height: 95px;
+    padding: 10px;
+    margin: 25px 31px;
+    text-align: center;
+    font-weight: 900;
+    font-size: larger;
+}
+
