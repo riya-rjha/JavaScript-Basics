@@ -46,4 +46,9 @@ console.log(C[0][1]);
 const D = [11,13,15,17];
 const E = [10,12,14,16];
 const F = [C,D,E];
+
+//Sorting Array in JS
+let nums1 = [2,63,4,2,0,7,6];
+nums1.sort((a, b) => a - b); //sorting in ascending order
+console.log(nums1);
 console.log(F[0][1][2]);
