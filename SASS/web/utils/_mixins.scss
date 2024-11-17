@@ -1,0 +1,6 @@
+@mixin flexprops($flex-dir){
+    display: flex;
+    align-items: center;
+    flex-direction: $flex-dir;
+    justify-content: center;
+}

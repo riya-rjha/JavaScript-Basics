@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+.container {
+  border: 60px solid #5758bb;
+}
+
+.box {
+  width: 10rem;
+  height: 10rem;
+  background-color: #ee5a24;
+  border: 5px solid #fda7df;
+  margin-top: 20px;
+}
+
+/*
+// Mixin
+
+@mixin flexprops {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+}
+
+@mixin margin($m1, $m2, $m3, $m4) {
+  margin: $m1 $m2 $m3 $m4;
+}
+  */
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  margin: 12rem 14rem 16rem 18rem;
+}
+
+.container .box {
+  border-radius: 20px;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */

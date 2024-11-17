@@ -1,0 +1,55 @@
+@import "mixin";
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+// Operators
+
+.container {
+  border: 30px + 30px solid #5758bb;
+}
+
+// // Variables
+// $bg-color: #ee5a24;
+// $border: 5px solid #fda7df;
+
+.box {
+  width: 10rem;
+  height: 10rem;
+  background-color: $bg-color;
+  border: $border;
+  margin-top: 20px;
+}
+
+/*
+// Mixin
+
+@mixin flexprops {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+}
+
+@mixin margin($m1, $m2, $m3, $m4) {
+  margin: $m1 $m2 $m3 $m4;
+}
+  */
+
+.grid {
+  @include flexprops();
+  @include margin(12rem, 14rem, 16rem, 18rem);
+}
+
+// Nesting
+.container {
+  .box {
+    border-radius: 20px;
+    text-align: center;
+  }
+}

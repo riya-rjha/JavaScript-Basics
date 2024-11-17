@@ -1,0 +1,11 @@
+// Mixin
+@mixin flexprops {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+}
+
+@mixin margin($m1, $m2, $m3, $m4) {
+  margin: $m1 $m2 $m3 $m4;
+}
