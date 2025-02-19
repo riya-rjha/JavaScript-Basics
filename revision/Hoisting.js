@@ -37,3 +37,15 @@ console.log(+a + +b);
 console.log("4" + 4);
 console.log("4" - 4);
 
+var thisName;
+
+console.log("Name outside function: " + thisName);
+
+function name(){
+    thisName = "Jacob";
+    console.log("Variable name in name function: " + thisName);
+}
+
+name();
+
+console.log("Name outside function: " + thisName);
