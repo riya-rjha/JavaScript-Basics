@@ -96,4 +96,5 @@ console.log(newArrayII);
 // Array.from() -> converts any data type to array
 
 let string = "DSA in Java";
-console.log(Array.from(string))
+console.log(Array.from(string));
+
