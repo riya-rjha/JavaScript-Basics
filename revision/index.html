@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JS</title>
+    <style>
+      body {
+        display: flex;
+        gap: 150px;
+        flex-direction: column;
+        font-family: Poppins;
+      }
+      .div2 {
+        width: 100px;
+        height: 200px;
+        background-color: yellow;
+      }
+
+      #root {
+        background-color: red;
+        height: 200px;
+        width: 200px;
+      }
+
+      #root2 {
+        background-color: green;
+        height: 400px;
+        width: 400px;
+        color: white;
+        padding: 20px;
+      }
+
+      .head {
+        background-color: purple;
+        padding: 15px;
+      }
+
+      button {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="root2">
+      <div class="head">
+        <p>I am the First Child</p>
+        <p>I am the Second Child</p>
+        <p>I am the Third Child</p>
+        <div class="foot">
+          <h2>This is foot class</h2>
+          <div class="more">
+            <h3>
+              I am the child of more which is a child of foot which is a child
+              of head and a child of root2.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button>Press Here</button>
+    <script src="script.js"></script>
+  </body>
+</html>

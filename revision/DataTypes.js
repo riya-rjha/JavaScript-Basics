@@ -21,11 +21,11 @@ console.log("Type of boolean var using new keyword: " + typeof ans);
 console.log("Type of boolean var: " + typeof newAns);
 
 // Objects and boolean both are truthy in if
-if(ans){
+if (ans) {
     console.log("boolean true");
 }
 newAns = true;
-if(newAns){
+if (newAns) {
     console.log("object true");
 }
 
@@ -82,7 +82,7 @@ let number = 4;
 console.log(number.toString(2));
 
 // If you want to call a method directly on a number, use ".." operator
-console.log(8..toString(2)); 
+console.log(8..toString(2));
 console.log((8).toString(2)); // using bracket
 
 // Rounding functions: ceil, floor, round, trunc
@@ -101,3 +101,128 @@ console.log(Math.round(-5.8));
 console.log(Math.round(5.5));
 console.log(Math.round(-5.2));
 
+// Maps & Sets
+
+// Arrays - ordered collection
+// Maps - keyed collection
+
+// Diff between object & map is that map allows keys of any type
+// unlike objs allowing only string type
+
+let map = new Map();
+map.set(0, "num1");
+map.set("name", "RRJ");
+map.set([1, 2], "array");
+
+console.log(map);
+
+console.log(map.get(3)); // undefined
+console.log(map.get("name"));
+
+// Every map set calls it's value so we can chain them
+
+map.set(true, 1)
+    .set(false, 4);
+console.log(map);
+
+// Iteration over map
+
+// map.keys() -> prints all keys
+for (let a of map.keys()) {
+    console.log(a);
+}
+
+// map.values() -> prints all values
+for (let a of map.keys()) {
+    console.log(map.get(a));
+}
+
+// map.entries() -> returns an iterable of entries
+for (let entry of map.entries()) {
+    console.log(entry)
+}
+
+// forEach on map params -> (value, key, map)
+map.forEach((value, key, map) => {
+    console.log("Value: ", value);
+    console.log("Key: ", key);
+    console.log("Map: ", map); // returns a 5 length map everytime
+});
+
+// Creating map from object
+let obj = {
+    "name": "Shtakshi",
+    "class": 3
+};
+
+let mapObj = new Map(Object.entries(obj)); // Objec.entries() returns an array of key and value pairs 
+console.log(mapObj);
+
+// Creating object from map
+
+let aMap = new Map([
+    ["name", 1], // key : value
+    ["class", 21],
+    ["anotherStudentsName", "Shtakshi"],
+    ["age", 31]]
+);
+
+console.log(Object.fromEntries(aMap))
+
+// Set
+
+let set = new Set();
+set.add(31);
+set.add(310);
+set.add(31);
+set.add(31);
+
+console.log(set);
+console.log(set.size);
+
+let isVal = set.delete(31)
+console.log(isVal)
+console.log(set)
+
+console.log(set.has(31));
+console.log(set.has(310));
+
+set.clear()
+console.log(set);
+
+// set.forEach() -> params: (value, valueAgain, set)
+
+set.add("Name");
+set.add(1);
+set.add(2);
+set.add(4);
+
+set.forEach((val, valAgain, set) => {
+    console.log("Value: " + val);
+    console.log("Value Again: " + valAgain);
+    console.log("Set: " + set);
+});
+
+// WeakMap
+
+// In WeakMap, keys must be objects only and not primitives
+
+let weakMap = new WeakMap();
+weakMap.set(obj, "This is an Object");
+console.log(weakMap.get(obj))
+
+// weakMap.set("Primitve", Error); // Error
+
+let joinArr = {"name": "Kali"};
+let anotherMap = new WeakMap();
+anotherMap.set(joinArr, true);
+console.log(anotherMap.get(joinArr)) // true
+joinArr = null;
+console.log(anotherMap.get(joinArr)) // undefined -> as WeakMap changes the values if the reference is removed
+
+// Application: WeakMap is used when we need to create additional storage space and remove the storage as and when the map is removed from the memory
+// ie., the data stays as long as the map stays
+
+// We can also use WeakMap in Cache. The object will be stored in cache as long as the session is going on and deletes if the reference is removed
+
+// Limitations of using WeakMap & WeakSet: They cannot be iterated through iterables, or Object.keys(), Object.entries(), forEach etc.
